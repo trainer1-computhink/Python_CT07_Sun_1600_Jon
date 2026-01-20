@@ -18,5 +18,7 @@
         "editor.fontSize": 16
       }
     }
-  }
+  },
+  "forwardPorts": [6080],
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-tk && pip install -r requirements.txt && python -m ipykernel install --user --name devcontainer_kernel --display-name \"Python (Dev Container)\""
 }
