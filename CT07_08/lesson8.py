@@ -130,6 +130,8 @@ print(new_sentences)
 # 3. Alternate between .upper() and .lower() for each letter
 # 4. Print the result.
 
+
+
 ## Task 5: Slice String
 # word = “SINGAPORE”
 

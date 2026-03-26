@@ -1,6 +1,6 @@
 {
   "name": "Python Turtle (Codespaces)",
-  "image": "mcr.microsoft.com/devcontainers/python:3.9-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {
       "webPort": "6080",
@@ -8,6 +8,7 @@
       "password": "vscode"
     }
   },
+  "forwardPorts": [6080, 5901],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,10 +16,10 @@
         "ms-vsliveshare.vsliveshare"
       ],
       "settings": {
-        "editor.fontSize": 16
+        "editor.fontSize": 16,
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   },
-  "forwardPorts": [6080],
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-tk && pip install -r requirements.txt && python -m ipykernel install --user --name devcontainer_kernel --display-name \"Python (Dev Container)\""
+  "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y python3-tk && pip install --upgrade pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; fi && python -m ipykernel install --user --name devcontainer_kernel --display-name \"Python (Dev Container)\""
 }
