@@ -17,7 +17,16 @@
       ],
       "settings": {
         "editor.fontSize": 16,
-        "python.defaultInterpreterPath": "/usr/local/bin/python"
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "chat.disableAIFeatures": true,
+
+        "editor.inlineSuggest.enabled": true,
+        "editor.suggest.showInlineDetails": true,
+        "editor.quickSuggestions": {
+          "other": true,
+          "comments": false,
+          "strings": false
+        },
       }
     }
   },
